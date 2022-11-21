@@ -1,0 +1,427 @@
+html{
+    scroll-behavior: smooth;
+
+
+}
+
+@keyframes color-change {
+    0%  { color:rgb(255, 72, 0); }
+    25% { color:orange; }
+    50% { color:yellow; }
+    75% { color:orange; }
+
+    100% { color:rgb(255, 72, 0); }
+  }
+
+.navbar button /* Toutes les propriétés liées aux boutons présents sur la page*/
+{
+    cursor: pointer;
+    z-index: 100000000000 ;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: calc(5px + 2vw);
+    color: violet;
+    height: 75%;
+    width: calc(10px + 10%);
+    border-radius: 35px;
+    margin-top: 30px;
+    margin-right: 5%;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    justify-content: center;
+    font-family: 'Torus Notched';
+    position: relative;
+
+}
+
+body /* Le background et ses propriétés*/
+{
+    display:flexbox;
+    background-color: red;
+
+}
+
+.navbar button:hover:active /* Changement de couleur lors du clique sur le bouton */
+{
+    cursor: grab;
+    transition-duration: 0.1s;
+    background-color: rgba(227, 34, 252, 0.164);
+}
+
+.navbar button:hover /* L'animation hover sur les boutons de la barre de navigation*/
+{
+    z-index: 3;
+    transition-duration: 0.7s;
+    margin-top: 0px;
+
+    position: relative;
+    box-shadow: 0 12px 1000px 0 rgba(49, 139, 94, 0.137),0 0 35px 0 rgba(238,130,238,0.59), inset 0 0 50px 0 rgba(238,130,238,0.59);
+
+
+}
+
+.navbar /* La barre de navigation et ses boutons */
+{
+    
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0);
+    top : 0;
+    margin-left: 15px;
+    height: 7vw;
+    width: 80%;
+    justify-content:space-between;
+}
+
+.backnav /* Le contour de la barre de navigation */
+{
+    border-radius: 30px;
+    position:absolute ;
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: -75px;
+    margin-left: -50px;
+    height: 225px;
+    width: 80%;
+    box-shadow: 0 12px 1000px 0 rgba(49, 139, 94, 0.137),0 0 35px 0 rgba(227, 34, 252, 0.39), inset 0 0 50px 0 rgba(227, 34, 252, 0.39);
+}
+
+@media (max-width: 1600px){
+    .backnav{
+        height: 170px;
+        width: 80%;
+    }
+}
+@media (max-width: 850px){
+    .backnav{
+        height: 150px;
+        width: 85%;
+    }
+    .navbar button 
+    {
+        height: 110%;
+        width: 15%;
+    }
+    .navbar button:hover /* L'animation hover sur les boutons de la barre de navigation*/
+    {
+        z-index: 3;
+        transition-duration: 0.7s;
+        margin-top: 0px;
+    
+        position: relative;
+        box-shadow: 0 12px 10px 0 rgba(49, 139, 94, 0.137),0 0 10px 0 rgba(238,130,238,0.59), inset 0 0 17px 0 rgba(238,130,238,0.59);
+    
+    
+    }
+}
+
+
+
+.div_logo /* La div ( ou bloc ) qui retiens le logo sur la droite de l'écran*/
+{
+    position: relative;
+    z-index: 0;
+    height: 7vw;
+    margin-top: 35px;
+    margin-right: 18%;
+    background-color: rgba(0, 0, 255, 0)
+}
+
+.div_logo .logo /* Le logo League of Legends au format SVG*/
+{
+
+    position: inherit;
+    width: 20%;
+    left: 100%;
+    z-index: 0;
+}
+
+h1{ /* Les stryles pour le titre principal ( A rendre invisible, puisque seulement pour le SEO ) */
+    background-color: rgba(240, 248, 255, 0);
+    color: rgb(0, 0, 255)
+}
+
+label /* Pour les boutons sur la page de contact us */
+{
+    color: rgb(255, 255, 255);
+}
+
+.texte /* La grosse div contenant deux div pour pouvoir utiliser le blur sur seulement 1 des deux divs*/
+{  
+    cursor: default;
+    position: relative;
+    
+}
+
+.texte p /* Les propriétés liées aux paragrahes <p></p> dans la div "texte"*/
+{
+    z-index: 500;
+    font-size: min(100px);
+    position: relative;
+    color: rgba(255, 255, 255, 0.700);
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-top: 5vw;
+    margin-right: 550px;
+}
+
+.div2 /* La div inclue dans la grande div "texte" qui inclut le blur pour le fond */
+{
+    box-shadow: 0 12px 1000px 0 rgba(49, 139, 94, 0.137),0 0 35px 0 rgba(227, 34, 252, 0.39), inset 0 0 50px 0 rgba(227, 34, 252, 0.39);
+    margin-top: 0px; 
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    background-color: rgba(42, 1, 92, 0.322);
+    filter: blur(10px);
+
+}
+
+@media(max-width: 1500px){
+    .texte p
+    {
+       margin-right:400px; 
+    }
+
+}
+@media(max-width: 1000px){
+    .texte p
+    {
+       margin-right:290px; 
+    }
+
+}
+@media(max-width: 600px){
+    .texte p
+
+    {
+       margin-right:190px; 
+    }
+
+} /* Tous les medias au dessus pour responsive de la div "texte"*/
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Playfair Display, sans-serif;
+  background: #f1f1f1;
+}
+
+.home {
+    height: 100vh;
+    position: relative;
+    background-color: black;
+
+  }
+
+
+video {
+object-fit: cover;
+position: fixed;
+height: max(100vh , 0);
+top: -0%;
+z-index: 1;
+background-color: black;
+}
+
+
+
+.hello
+{
+    object-fit: cover;
+    z-index: 10;
+    background-image: url(images/test.jpg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+    position:absolute;
+    top:0%;
+    height: 56vw;
+    cursor : url("https://brand.riotgames.com/images/league-of-legends/cursor-pointer.png",auto;)
+}
+
+
+.zz
+{
+    margin-top: -48vw;
+    z-index: 11000;
+    height: 100%;
+    background-image: url(images/asol.jpeg);
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+
+
+.text
+{
+    z-index: 20;
+    background-color: rgba(10,0,30, 0.637);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: 0 0px 100px 300px rgba(10,0,30, 0.637);
+    justify-content: center;
+}
+
+
+.contour
+{
+  height: 0;
+  width: 100%;
+}
+
+
+.form_div
+{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 100%;
+  margin-left: 25%;
+  justify-content: space-evenly;
+
+}
+
+
+.form_div .formulaire
+{
+  height: 50%;
+  width: 50%;
+  position:inherit;
+  justify-content: center;
+  text-align: center;
+  top:20%;
+  right:30%;
+}
+
+.blurry_round
+{
+  position: inherit;
+  height: 100vh;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.741);
+  filter: blur(100px);
+}
+
+form
+{
+  display: inline-block;
+}
+
+input
+{
+  width: 100%;
+  padding: 4.5%;  
+  color: blue;
+  border-radius: 100px;
+  /*box-shadow:0 12px 1000px 0 rgba(0, 0, 0, 0),0 0 35px 0 rgba(227, 34, 252, 0), inset 0 0 50px 0 rgb(128, 0, 128);*/
+  border:solid rgba(128, 0, 128, 0.541);   
+  text-shadow: 2px 2px 10px violet, 0 0 5px #FFFF00;
+
+  font-size: calc(5px + 1.5vw);
+  font-family: "Press Start 2P";
+
+}
+
+label
+{
+  color :rgb(255, 255, 255);
+  font-size: calc(5px + 2vw);
+  font-family:"Press Start 2P",sans-serif;
+}
+
+
+
+.parallax-effect {
+    z-index: -1000;
+    background-clip: url("arcane.mp4");
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+.espace
+{
+    margin-top: 100vw;
+    z-index: 11000;
+    height: 1380px;
+    background-color: rgba(255, 0, 0, 0);
+    background-size: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.div_logo button
+{
+    cursor: pointer;
+    background-color: #ffffff00;
+    z-index: 111111100000;
+    position: absolute;
+    margin-left: 100%;
+    margin-top: 0.2%;
+    border: none;
+    height: 90%;
+    width: 20%;
+
+}
+
+.zz .pa
+{
+    padding-left: 10px;
+    margin-top: 35%;
+    width: 100%;
+    font-size: 1.9vw;
+    font-family: 'Changa', sans-serif;}
+    
+.zz .shadooow
+{
+    animation: color-change 2s infinite;
+    margin-top: 31%;
+    margin-left: 10%;
+    background-color: rgba(54, 57, 62, 0.842);
+
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0px 0px 50px rgb(255, 255, 255);
+    justify-content: center;
+
+}
+
+
+.div_logo button:hover /* Changement de couleur lors du clique sur le bouton */
+{
+    cursor: pointer;
+    transition-duration: 0.1s;
+    background-color: rgba(227, 34, 252, 0);
+    border-radius: 5%;
+    box-shadow: 0px 0px 100px rgba(227, 34, 252, 0.301);
+}
+
+.div_logo button:hover:active /* Changement de couleur lors du clique sur le bouton */
+{
+    cursor: grab;
+
+    transition-duration: 0.2s;
+    background-color: rgba(227, 34, 252, 0.001);
+    border-radius: 15%;
+    box-shadow: 0px 0px 100px rgba(227, 34, 252, 0.301), inset 0px 0px 10000px rgba(227, 34, 252, 0.151);
+
+}
+
+
+
+@media (hover:hover){.zz select:hover{cursor:url(/images/league-of-legends/cursor-pointer.png),auto;}}/*!sc*/
